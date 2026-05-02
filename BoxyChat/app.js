@@ -5,8 +5,8 @@ if (username.length > 50) {
   alert("Username trimmed to 50 characters.");
 }
 
-// CONNECT TO SERVER
-const socket = new WebSocket("ws://localhost:3000");
+// CONNECT TO SERVERconst socket = new WebSocket("ws://localhost:3000");
+
 
 const messages = document.getElementById("messages");
 const input = document.getElementById("msgInput");
