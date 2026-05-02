@@ -5,21 +5,27 @@ if (username.length > 50) {
   alert("Username trimmed to 50 characters.");
 }
 
+// CONNECT TO SERVER
+const socket = new WebSocket("ws://localhost:3000");
+
 const messages = document.getElementById("messages");
 const input = document.getElementById("msgInput");
 const button = document.getElementById("sendBtn");
 
+// RECEIVE MESSAGE
+socket.onmessage = (event) => {
+  const msg = document.createElement("div");
+  msg.className = "msg";
+  msg.innerText = event.data;
+  messages.appendChild(msg);
+};
+
+// SEND MESSAGE
 function sendMessage() {
   let text = input.value.trim();
   if (!text) return;
 
-  let msg = document.createElement("div");
-  msg.className = "msg";
-  msg.innerText = `${username}: ${text}`;
-
-  messages.appendChild(msg);
-  messages.scrollTop = messages.scrollHeight;
-
+  socket.send(`${username}: ${text}`);
   input.value = "";
 }
 
