@@ -1,0 +1,95 @@
+body {
+margin: 0;
+font-family: Arial;
+display: flex;
+height: 100vh;
+background: #0b0b12;
+color: white;
+}
+
+/* SERVERS */
+#servers {
+width: 70px;
+background: #0f0f1a;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 10px;
+}
+
+.server {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+margin: 8px;
+background: linear-gradient(45deg, #7a00ff, #00c3ff);
+cursor: pointer;
+}
+
+/* CHANNELS */
+#channels {
+width: 220px;
+background: #121225;
+padding: 10px;
+}
+
+.title {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.channel {
+padding: 10px;
+margin: 5px 0;
+background: #1a1a33;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.channel.active {
+background: #7a00ff;
+}
+
+/* CHAT */
+#chat {
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+
+#messages {
+flex: 1;
+padding: 10px;
+overflow-y: auto;
+}
+
+.msg {
+background: #1a1a2e;
+padding: 8px;
+margin: 5px 0;
+border-left: 3px solid #00c3ff;
+}
+
+/* INPUT */
+#inputArea {
+display: flex;
+padding: 10px;
+background: #121225;
+}
+
+input {
+flex: 1;
+padding: 10px;
+border: none;
+outline: none;
+background: #1a1a2e;
+color: white;
+}
+
+button {
+background: #7a00ff;
+border: none;
+color: white;
+padding: 10px;
+cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BoxyChat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SERVER BAR -->
+<div id="servers">
+  <div class="server active"></div>
+  <div class="server"></div>
+  <div class="server"></div>
+</div>
+
+<!-- CHANNELS -->
+<div id="channels">
+  <div class="title">BoxyChat</div>
+  <div class="channel active"># general</div>
+  <div class="channel"># chat</div>
+</div>
+
+<!-- CHAT AREA -->
+<div id="chat">
+
+  <div id="messages"></div>
+
+  <div id="inputArea">
+    <input id="msgInput" maxlength="300" placeholder="Message BoxyChat...">
+    <button id="sendBtn">Send</button>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
